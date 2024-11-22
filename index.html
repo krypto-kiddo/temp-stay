@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Codex - Creative Landing Page</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Creative Landing Page" name="keywords">
+        <meta content="Creative Landing Page" name="description">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="img/favicon/site.webmanifest">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Oswald:500,700&display=swap" rel="stylesheet"> 
+
+        <!-- Libraries CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Main Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Header Start-->
+        <div class="header">
+            <div class="container">
+                <h4>AMD</h4>
+                <h1>temp<font color="white">s</font>tay</h1>
+                <p>Your quick fix for affordable local stays during high-demand events. Skip overpriced hotels by connecting with trusted households offering safe, clean rooms. Perfect for events like the upcoming concert, we make finding a stay simple and budget-friendly!
+                </p>
+                <div class="email-subscription">
+                    <input type="email" id="email-input" class="email-input" placeholder="Enter your email" required />
+                    <button id="submit-btn" class="subscribe-btn">Notify Me</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById('submit-btn').addEventListener('click', () => {
+                const email = document.getElementById('email-input').value;
+        
+                if (email) {
+                    fetch('https://script.google.com/macros/s/AKfycbyrlx2kR_Dp50k_lzTvcvfr_m8xfm3hLt72rKv3BCLnr9ahZ98P_pAntKVLtNzu83-u/exec', { 
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        mode: 'no-cors', // Avoids CORS errors but limits response handling
+                        body: JSON.stringify({ email }),
+                    })
+                    .then(() => {
+                        alert("Thank you!");
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                        alert("Something went wrong. Please try again.");
+                    });
+                } else {
+                    alert("Please enter a valid email address.");
+                }
+            });
+        </script>
+        
+        <!-- Header End-->
+
+        <!-- About Start-->
+        <div class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h4>Learn more</h4>
+                    <h2>About</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar velit sit amet porta convallis.
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="about-img">
+                            <img src="img/about-story.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="about-content">
+                            <h2>Our Story</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar velit sit amet porta convallis. Quisque scelerisque lorem scelerisque tempus pretium. Donec dapibus neque
+                            </p>
+                            <a class="btn" href="#">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about-img">
+                            <img src="img/about-goal.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="about-content">
+                            <h2>Our Goal</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar velit sit amet porta convallis. Quisque scelerisque lorem scelerisque tempus pretium. Donec dapibus neque
+                            </p>
+                            <a class="btn" href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+        <!-- Service Start -->
+        <div class="service">
+            <div class="container">
+                <div class="section-header">
+                    <span class="glyphicon glyphicon-asterisk"></span>
+                    <h4>World class</h4>
+                    <h2>Services</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar velit sit amet porta convallis. 
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-item">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-desktop"></i>
+                                </div>
+                                <div class="service-title">
+                                    <h4>Web Design</h4>
+                                </div>
+                            </div>
+                            <div class="service-detail">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar velit</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-item">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-laptop"></i>
+                                </div>
+                                <div class="service-title">
+                                    <h4>Web Development</h4>
+                                </div>
+                            </div>
+                            <div class="service-detail">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar velit</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-item">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-tablet-alt"></i>
+                                </div>
+                                <div class="service-title">
+                                    <h4>App Design</h4>
+                                </div>
+                            </div>
+                            <div class="service-detail">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar velit</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-item">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="service-title">
+                                    <h4>App Development</h4>
+                                </div>
+                            </div>
+                            <div class="service-detail">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar velit</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-item">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="service-title">
+                                    <h4>Online Security</h4>
+                                </div>
+                            </div>
+                            <div class="service-detail">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar velit</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-item">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-envelope-open-text"></i>
+                                </div>
+                                <div class="service-title">
+                                    <h4>Digital Marketing</h4>
+                                </div>
+                            </div>
+                            <div class="service-detail">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar velit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+
+        <!-- Call To Action Start -->
+        <div class="call-to-action">
+            <div class="container text-center">
+                <div class="section-header">
+                    <h4>Call to action</h4>
+                    <h2>Call us</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar velit sit amet porta convallis. 
+                    </p>
+                </div>
+                <a class="btn" href="#"><i class="fas fa-phone-alt"></i>Click to Call</a>
+            </div>
+        </div>
+        <!-- Call To Action End -->
+
+        <!-- Portfolio Start -->
+        <div class="portfolio">
+            <div class="container">
+                <div class="section-header">
+                    <h4>Creative</h4>
+                    <h2>Works</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar velit sit amet porta convallis. 
+                    </p>
+                </div>
+
+                <div class="row portfolio-container">
+                    <div class="col-lg-4 col-md-6 portfolio-item">
+                        <div class="portfolio-img">
+                            <img src="img/portfolio-1.jpg" class="img-fluid" alt="Portfolio">
+                            <div class="portfolio-link">
+                                <a href="img/portfolio-1.jpg" data-lightbox="portfolio" data-title="Lorem ipsum dolor" title="Preview"><i class="fas fa-eye"></i></a>
+                                <a href="" title="More Details"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-info">
+                            <h4>Lorem ipsum dolor</h4>
+                            <p>Web Design</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item">
+                        <div class="portfolio-img">
+                            <img src="img/portfolio-2.jpg" class="img-fluid" alt="Portfolio">
+                            <div class="portfolio-link">
+                                <a href="img/portfolio-2.jpg" data-lightbox="portfolio" data-title="Nulla ullamcorper pharetra" title="Preview"><i class="fas fa-eye"></i></a>
+                                <a href="" title="More Details"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-info">
+                            <h4>Nulla ullamcorper pharetra</h4>
+                            <p>Web Development</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item">
+                        <div class="portfolio-img">
+                            <img src="img/portfolio-3.jpg" class="img-fluid" alt="Portfolio">
+                            <div class="portfolio-link">
+                                <a href="img/portfolio-3.jpg" data-lightbox="portfolio" data-title="Phasellus eget dictum" title="Preview"><i class="fas fa-eye"></i></a>
+                                <a href="" title="More Details"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-info">
+                            <h4>Phasellus eget dictum</h4>
+                            <p>App Design</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item">
+                        <div class="portfolio-img">
+                            <img src="img/portfolio-4.jpg" class="img-fluid" alt="Portfolio">
+                            <div class="portfolio-link">
+                                <a href="img/portfolio-4.jpg" data-lightbox="portfolio" data-title="Lorem ipsum dolor" title="Preview"><i class="fas fa-eye"></i></a>
+                                <a href="" title="More Details"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-info">
+                            <h4>Donec mattis vestibulum</h4>
+                            <p>App Development</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item">
+                        <div class="portfolio-img">
+                            <img src="img/portfolio-5.jpg" class="img-fluid" alt="Portfolio">
+                            <div class="portfolio-link">
+                                <a href="img/portfolio-5.jpg" data-lightbox="portfolio" data-title="Nulla ullamcorper pharetra" title="Preview"><i class="fas fa-eye"></i></a>
+                                <a href="" title="More Details"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-info">
+                            <h4>Pellentesque ullamcorper</h4>
+                            <p>Web Design</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item">
+                        <div class="portfolio-img">
+                            <img src="img/portfolio-6.jpg" class="img-fluid" alt="Portfolio">
+                            <div class="portfolio-link">
+                                <a href="img/portfolio-6.jpg" data-lightbox="portfolio" data-title="Phasellus eget dictum" title="Preview"><i class="fas fa-eye"></i></a>
+                                <a href="" title="More Details"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-info">
+                            <h4>Sed pretium sapien</h4>
+                            <p>Web Development</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio End -->
+        
+        <!--Pricing start-->
+        <div class="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <h4>Affordable</h4>
+                    <h2>Pricing</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar velit sit amet porta convallis. 
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="price-content">
+                            <div class="price-plan">
+                                <div class="price-overlay">Reasonable</div>
+                                <p class="price-title"><i class="fas fa-home"></i>Silver</p>
+                                <h2 class="price-amount"><span>$</span>9<span>.99</span><span> / m</span></h2>
+                            </div>
+                            <ul class="price-details">
+                                <li><i class="fas fa-check"></i><strong>HTML5</strong> and <strong>CSS3</strong></li>
+                                <li><i class="fas fa-check"></i><strong>Responsive</strong> design</li>
+                                <li><i class="fas fa-times"></i><strong>IonIcons</strong> integrated</li>
+                                <li><i class="fas fa-times"></i><strong>Google Font</strong> integrated</li>
+                            </ul>
+                            <a href="#" class="btn mian-btn price-btn">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="price-content features-price">
+                            <div class="price-plan">
+                                <div class="price-overlay">Recommended</div>
+                                <p class="price-title"><i class="fas fa-star"></i>Gold</p>
+                                <h2 class="price-amount"><span>$</span>19<span>.99</span><span> / m</span></h2>
+                            </div>
+                            <ul class="price-details">
+                                <li><i class="fas fa-check"></i><strong>HTML5</strong> and <strong>CSS3</strong></li>
+                                <li><i class="fas fa-check"></i><strong>Responsive</strong> design</li>
+                                <li><i class="fas fa-check"></i><strong>IonIcons</strong> integrated</li>
+                                <li><i class="fas fa-times"></i><strong>Google Font</strong> integrated</li>
+                            </ul>
+                            <a href="#" class="btn mian-btn price-btn features-price-btn">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="price-content">
+                            <div class="price-plan">
+                                <div class="price-overlay">All in One</div>
+                                <p class="price-title"><i class="fas fa-gift"></i>Platinum</p>
+                                <h2 class="price-amount"><span>$</span>29<span>.99</span><span> / m</span></h2>
+                            </div>
+                            <ul class="price-details">
+                                <li><i class="fas fa-check"></i><strong>HTML5</strong> and <strong>CSS3</strong></li>
+                                <li><i class="fas fa-check"></i><strong>Responsive</strong> design</li>
+                                <li><i class="fas fa-check"></i><strong>IonIcons</strong> integrated</li>
+                                <li><i class="fas fa-check"></i><strong>Google Font</strong> integrated</li>
+                            </ul>
+                            <a href="#" class="btn mian-btn price-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Pricing End-->
+
+        <!-- Contact Start -->
+        <div class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h4>24/h Support</h4>
+                    <h2>Contact</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar velit sit amet porta convallis.
+                    </p>
+                </div>
+
+                <div class="row contact-inner">
+                    <div class="col-md-12">
+                        <h2>support@htmlcodex.com</h2>
+                    </div>
+                </div>
+                <div class="row contact-inner">
+                    <div class="col-md-6">
+                        <i class="fas fa-phone"></i>
+                        <p>+123 456 789</p>
+                    </div>
+                    <div class="col-md-6">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>We're from USA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="col-md-12 copyright">
+                        Copyright &copy; 2020 <a href="https://htmlcodex.com">HTML Codex</a>. All Rights Reserved
+                    </div>
+                    <div class="col-md-12 credit">
+                        Template by <a href="https://htmlcodex.com">HTML Codex</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <a href="#" class="back-to-top"><i class="fas fa-angle-up"></i></a>
+
+        <!-- Libraries JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <!-- Main Javascript -->
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
